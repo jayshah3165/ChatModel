@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PostNewsFeedActivity">
+
+    <com.echo.allscenarioapp.custom.CustomHeader
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <RelativeLayout
+
+        android:layout_below="@+id/header"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <EditText
+            android:id="@+id/edtCaptionText"
+           style="@style/editTextStyle"
+            android:hint="Type here..."
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@android:color/black"
+           />
+
+
+
+        <RelativeLayout
+            android:id="@+id/rrCenterView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_below="@+id/edtCaptionText">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_upload_preview"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/imgCancelImage"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:src="@drawable/cancel_green"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/imgAudio"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:scaleType="fitXY"
+                android:layout_centerInParent="true"
+                android:src="@drawable/microphone"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgLocation"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:scaleType="fitXY"
+                android:layout_centerInParent="true"
+                android:src="@drawable/marker"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/btnPost"
+        style="@style/txtBold_16Style"
+        android:text="Post"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/green_color"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

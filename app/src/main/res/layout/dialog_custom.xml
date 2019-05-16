@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="@drawable/green_border_dialog"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialogHeader"
+       style="@style/txtReguler_14Style"
+        android:gravity="center_horizontal"
+
+        android:text="Header"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/dialogFirst"
+        style="@style/txtReguler_14Style"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_10sdp"
+
+        android:text="Header"
+
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/dialogEditText"
+        style="@style/editTextStyle"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:gravity="center_horizontal"
+        android:inputType="textCapWords"
+        android:padding="@dimen/_10sdp"
+        android:singleLine="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/dialogSecond"
+        style="@style/txtReguler_14Style"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/green_border_button"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_30sdp"
+        android:paddingRight="@dimen/_30sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:text="Header"
+        android:textColor="@color/colorPrimary"
+        android:visibility="visible" />
+    <TextView
+        android:id="@+id/dialogThird"
+        style="@style/txtReguler_14Style"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/green_border_button"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_30sdp"
+        android:paddingRight="@dimen/_30sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:text="Header"
+        android:textColor="@color/colorPrimary"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/dialogOK"
+       style="@style/txtReguler_14Style"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="Header"
+        android:textColor="@color/colorPrimary"
+        android:visibility="visible" />
+
+</LinearLayout>

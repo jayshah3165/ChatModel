@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/txtYourGroupMadeReservation"
+        style="@style/txtBold_14Style"
+        android:gravity="center"
+        android:singleLine="false"
+        android:text="@string/strDeleteConversation"
+        android:textColor="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_below="@+id/txtYourGroupMadeReservation"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/btnCancel"
+            style="@style/btnLohinstyle"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+
+            android:text="Cancel" />
+
+        <TextView
+            android:id="@+id/btnDelete"
+            style="@style/btnLohinstyle"
+            android:layout_width="@dimen/_100sdp"
+
+            android:layout_marginLeft="@dimen/_5sdp"
+
+            android:text="Delete" />
+    </LinearLayout>
+</RelativeLayout>

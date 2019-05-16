@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NewsFeedActivity">
+
+    <com.echo.allscenarioapp.custom.CustomHeader
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <LinearLayout
+        android:id="@+id/llWriteSomething"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_margin="@dimen/_5sdp"
+
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/btnWriteSomething"
+            style="@style/txtBold_16Style"
+            android:gravity="left"
+            android:hint="@string/strWriteSomething"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_16sdp" />
+
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view_1"
+        android:layout_below="@+id/llWriteSomething"
+        style="@style/view_style"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@+id/view_1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lstFeedList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <TextView
+        android:id="@+id/txtNoDataFound"
+        style="@style/txtBold_16Style"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/strNoDataFound"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

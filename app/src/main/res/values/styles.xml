@@ -1,0 +1,164 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDisablePreview">true</item>
+
+    </style>
+
+
+
+
+
+
+
+    <!--TextView Style with 3 diff. Fonts-->
+    <style name="textViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingLeft">@dimen/_5sdp</item>
+        <item name="android:paddingRight">@dimen/_5sdp</item>
+        <item name="android:paddingTop">@dimen/_5sdp</item>
+        <item name="android:paddingBottom">@dimen/_5sdp</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColorHint">@android:color/black</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:tag">@string/font_regular</item>
+    </style>
+
+    <!--TextView Style with Regular Fonts-->
+    <style name="txtReguler_9Style" parent="textViewStyle">
+        <item name="android:textSize">@dimen/_9sdp</item>
+    </style>
+    <style name="txtReguler_10Style" parent="textViewStyle">
+        <item name="android:textSize">@dimen/_10sdp</item>
+    </style>
+    <style name="txtReguler_12Style" parent="textViewStyle">
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+    <style name="txtReguler_14Style" parent="textViewStyle">
+        <item name="android:textSize">@dimen/_14sdp</item>
+    </style>
+
+    <style name="txtReguler_16Style" parent="textViewStyle">
+        <item name="android:textSize">@dimen/_16sdp</item>
+    </style>
+
+
+
+
+    <!--TextView Style with Light Fonts-->
+    <style name="txtLight_9Style" parent="textViewStyle">
+        <item name="android:tag">@string/font_light</item>
+        <item name="android:textSize">@dimen/_9sdp</item>
+    </style>
+    <style name="txtLight_10Style" parent="textViewStyle">
+        <item name="android:tag">@string/font_light</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+    </style>
+    <style name="txtLight_12Style" parent="textViewStyle">
+        <item name="android:tag">@string/font_light</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+    <style name="txtLight_14Style" parent="textViewStyle">
+        <item name="android:tag">@string/font_light</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+    </style>
+    <style name="txtLight_16Style" parent="textViewStyle">
+        <item name="android:tag">@string/font_light</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+    </style>
+
+    <!--TextView Style with Bold Fonts-->
+    <style name="txtBold_10Style" parent="textViewStyle">
+        <item name="android:tag">@string/font_bold</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+    </style>
+    <style name="txtBold_12Style" parent="textViewStyle">
+        <item name="android:tag">@string/font_bold</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+
+    <style name="txtBold_14Style" parent="textViewStyle">
+        <item name="android:tag">@string/font_bold</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+    </style>
+
+    <style name="txtBold_16Style" parent="textViewStyle">
+        <item name="android:tag">@string/font_bold</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+    </style>
+
+
+    <!--Edittext Style -->
+    <style name="editTextStyle" parent="txtLight_12Style">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:paddingTop">@dimen/_5sdp</item>
+        <item name="android:paddingBottom">@dimen/_5sdp</item>
+        <item name="android:textColorHint">@android:color/black</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    <!--Login button And All Button  Style Which is rounded black background-->
+    <style name="btnLohinstyle" parent="txtReguler_16Style">
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="android:paddingLeft">@dimen/_10sdp</item>
+        <item name="android:paddingRight">@dimen/_10sdp</item>
+        <item name="android:paddingTop">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/dr_rounded_corner_login_btn</item>
+    </style>
+    <style name="btnAddMemberstyle" parent="txtReguler_12Style">
+        <item name="android:layout_marginTop">@dimen/_15sdp</item>
+        <item name="android:paddingLeft">@dimen/_10sdp</item>
+        <item name="android:paddingRight">@dimen/_10sdp</item>
+        <item name="android:paddingTop">@dimen/_5sdp</item>
+        <item name="android:paddingBottom">@dimen/_5sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/dr_rounded_corner_login_btn</item>
+    </style>
+
+
+    <style name="CropTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+    </style>
+
+    <!--View Style (Horizontal Line)-->
+    <style name="view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+
+    <!--Delete Conversation Dialog Style (Chat Details Activity)-->
+    <style name="Theme_DialogDeleteConversation" parent="android:Theme.Holo.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:radius">@dimen/_30sdp</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+
+</resources>

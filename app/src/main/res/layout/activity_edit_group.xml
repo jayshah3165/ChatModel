@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.echo.allscenarioapp.custom.CustomHeader
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/rrbutton"
+        android:orientation="vertical">
+
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imgProfilePic"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onProfilePicClick"
+
+                app:actualImageResource="@drawable/avatar"
+                app:actualImageScaleType="fitXY"
+                app:placeholderImage="@drawable/avatar"
+                app:placeholderImageScaleType="fitXY"
+                app:roundAsCircle="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:roundingBorderColor="@color/colorPrimary"
+                app:roundingBorderWidth="2dp" />
+
+
+
+            <EditText
+                android:id="@+id/edtCreateGruop"
+                style="@style/editTextStyle"
+                android:inputType="text"
+                android:layout_below="@+id/imgProfilePic"
+                android:paddingLeft="0dp"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="@dimen/_10sdp"
+                />
+            <!--</android.support.design.widget.TextInputLayout>-->
+            <View
+                android:id="@+id/view1"
+                android:layout_below="@+id/edtCreateGruop"
+                style="@style/view_style"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:layout_marginLeft="@dimen/_25sdp"/>
+
+            <RelativeLayout
+                android:id="@+id/rrGroupMember"
+                android:layout_below="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/green_color">
+
+
+                <TextView
+                   style="@style/txtBold_16Style"
+                    android:text="Group Member"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"/>
+
+
+                <TextView
+                    android:id="@+id/btnAddmember"
+                    style="@style/btnAddMemberstyle"
+                    android:layout_width="wrap_content"
+                    android:text="Add Member"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_centerVertical="true"
+                   android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@+id/rrGroupMember"
+                android:id="@+id/lstFriendsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp" />
+
+
+
+
+        </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rrbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_color">
+
+
+        <TextView
+            android:id="@+id/btnLeftGroup"
+            style="@style/txtBold_16Style"
+            android:text="Left Group"
+            android:gravity="center"
+            android:textColor="@color/color_red"
+            android:background="@color/gray_color"
+             />
+
+
+        <TextView
+            android:id="@+id/btnDeleteGroup"
+            style="@style/txtBold_16Style"
+            android:layout_below="@+id/btnLeftGroup"
+            android:text="Delete Group"
+            android:textColor="@android:color/white"
+            android:background="@color/color_red"
+            android:gravity="center"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

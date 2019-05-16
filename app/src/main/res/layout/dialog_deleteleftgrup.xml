@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/txtYourGroupMadeReservation"
+        style="@style/txtBold_14Style"
+        android:gravity="center"
+        android:singleLine="false"
+        android:background="@color/chat_details_header"
+        android:text="Are You Sure You Want to?"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtYourGroupMadeReservation"
+
+
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/btnLeftGroup"
+            style="@style/txtBold_16Style"
+            android:padding="@dimen/_10sdp"
+            android:background="@color/chat_my_side_msg"
+            android:gravity="center"
+            android:text="Left Group" />
+
+        <View
+           style="@style/view_style"/>
+
+
+        <View
+            style="@style/view_style"/>
+        <TextView
+            android:id="@+id/btnCancel"
+            style="@style/txtBold_16Style"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:background="@color/chat_my_side_msg"
+            android:text="Cancel" />
+
+    </LinearLayout>
+</RelativeLayout>

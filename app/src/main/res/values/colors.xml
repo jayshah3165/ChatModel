@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="color_red">#FF0000</color>
+    <color name="green_color">#9bcd50</color>
+    <color name="transparent">#80000000</color>
+    <color name="chat_details_header">#005e55</color>
+    <color name="chat_my_side_msg">#e0ffcb</color>
+    <color name="colorGray">#CDCDCD</color>
+    <color name="color_more">#0191CE</color>
+    <color name="colorWhiteGray">#EEEEEE</color>
+    <color name="gray_color">#989898</color>
+
+
+
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_140sdp"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/_20sdp"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:src="@drawable/ic_up_arrow"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_below="@+id/ivArrow"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/rounded_corner_5dp">
+        <TextView
+            android:id="@+id/txtClearConversation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="Clear Conversation"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15sdp" />
+        <View
+            android:id="@+id/viewReply"
+            style="@style/view_style"
+
+            />
+
+        <TextView
+            android:id="@+id/txtBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="Block"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15sdp"
+           />
+        <View
+            style="@style/view_style"
+            />
+        <TextView
+            android:id="@+id/txtCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15sdp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

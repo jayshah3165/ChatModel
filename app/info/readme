@@ -1,0 +1,90 @@
+
+1) Login Module
+--------------------------------------------
+ i)Facebook Integration Steps[Code from Giftzy APP]
+    - go to developers.facebook.com
+    - login with register account
+    - go to My Apps which located on Dashboard
+    - create new app
+    - Add new App
+    - create new app id with ProjetName and contact email id > Tap on "Create App ID" button
+    - go to settings  -> basics
+    - CLick on Add platform
+    - select Android Platform
+    - add package name , class name , key hashes (Single sign on - yes , inApp purchase - no )
+    - how to generate keyhash ? Ans - Our SplashActivity put function Utils.printHashKey(this);[Make sure change package name in keyhash function in Utils]
+    - click on save changes button.
+    - copy App Id  - 321579608531104 on Top of dashboard
+    - set App Id in 2 place below :-
+    - put below code in res > Values > string.xml
+        <string name="facebook_app_id">321579608531104</string>
+        <string name="fb_login_protocol_scheme">fb321579608531104</string>
+     -put below code in AndroidMainfest.xml
+               <meta-data
+                          android:name="com.facebook.sdk.ApplicationId"
+                          android:value="@string/facebook_app_id" />
+                      <provider
+                          android:name="com.facebook.FacebookContentProvider"
+                          android:authorities="com.facebook.app.FacebookContentProvider321579608531104"
+                          android:exported="true" />
+
+      - For Coding Steps :-
+            -declare CallbackManager obj
+            -create Function HandleFacebookLogin();[into Initialisation()]
+            - click on FB button -> LoginManager.getInstance().logOut();
+                                    LoginManager.getInstance().logInWithReadPermissions(LoginActivity.this, Arrays.asList("public_profile", "email"));[required for Request]
+
+
+
+  ii) Gplus Integration Steps[Code from Giftzy APP]
+
+    - go to console.firebase.google.com
+    - Login with Register email
+    - Click on Add Project Which is located on Dashboard / DashBoard > Add Project (if Not Available) / Select Project
+    -  Project name is Unique it's dosn't matter Project name same as app Name
+    - create project click
+    - select Android Platform
+    - Register App
+        - App nickname // APp name in our string file
+        - Add package name
+        - Download google-services.json file and put into app folder in our project
+        - add firebase sdk
+                -  implementation 'com.google.firebase:firebase-auth:16.0.3'(App level gradle)
+                -  implementation 'com.google.firebase:firebase-core:16.0.1'(App level gradle)
+                -  apply plugin: 'com.google.gms.google-services'(App level gradle)
+                -  classpath 'com.google.gms:google-services:4.0.1'(Project level gradle)
+
+        - Run your App or UnInstall and Reinstall app to verify
+
+        - For Coding Steps :-
+            - create GoogleApiClient obj ;
+            - create Function   googleLoginnew();[into Initialisation()]
+            -on Click Gplus button -> call function   signInNew();
+            - in googleLoginnew() code below :-
+                                private void googleLoginnew() {
+                                       //Request for email and profile to Gplus
+                                                  GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                                                      .requestProfile()
+                                                       .requestEmail()
+                                                        .build();
+
+                                                    mGoogleApiClient = new GoogleApiClient.Builder(this)
+                                                    .enableAutoManage(this, new GoogleApiClient.OnConnectionFailedListener() {
+                                                     @Override
+                                                        public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+                                                                 Utils.print("" + connectionResult.getErrorCode() + ":::" + connectionResult.getErrorMessage());
+                                                                }
+                                                              })
+                                                         .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                                                          .build();
+
+
+                                                            }
+            -   FirebaseApp.initializeApp(getApplicationContext()); into MainApplication
+             - in signInNew() code below :-
+                     private void signInNew() {
+                            Utils.showProgress(LoginActivity.this);
+                            Auth.GoogleSignInApi.signOut(mGoogleApiClient);
+                            Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+                            startActivityForResult(signInIntent, RC_SIGN_IN);
+                            }

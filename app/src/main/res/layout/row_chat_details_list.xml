@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/row"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/avatar"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true"
+            android:visibility="gone"
+            />
+    <RelativeLayout
+        android:id="@+id/rrFriendsMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_toRightOf="@+id/imgProfilePic"
+        android:background="@drawable/dr_one_to_one_chat_yourside_bg_btn"
+        android:padding="@dimen/_5sdp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/lltxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtUserName"
+                    style="@style/txtReguler_12Style"
+                    android:layout_width="wrap_content"
+                    android:padding="0dp"
+                    android:text="Mark"
+                    android:visibility="gone"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtUsermsg"
+                    style="@style/txtReguler_12Style"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/txtUserName"
+                    android:singleLine="false"
+                    android:text="Hello "
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imgAudio"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/lltxt"
+                android:background="@drawable/microphone"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_below="@+id/rlMain"
+            android:layout_margin="@dimen/_10sdp"
+            android:visibility="gone"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardPreventCornerOverlap="false">
+            <ImageView
+                android:id="@+id/imgFile"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:visibility="gone"
+                android:src="@drawable/file"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imgSendimg"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_alignParentTop="true"
+                app:roundBottomLeft="true"
+                android:background="@drawable/ic_inner_fb"
+                app:roundBottomRight="true"
+                app:roundTopLeft="true"
+                app:roundTopRight="true" />
+
+            <ImageView
+                android:id="@+id/imgplay"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_play" />
+
+        </android.support.v7.widget.CardView>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/cardview"
+            android:layout_marginLeft="@dimen/_11sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtMsgTime"
+            style="@style/txtReguler_10Style"
+            android:layout_width="wrap_content"
+            android:padding="0dp"
+            android:text="10:23 PM"
+            android:textColor="@android:color/black" />
+        </RelativeLayout>
+
+
+</RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rrMyMsg"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_45sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/dr_one_to_one_chat_bg_btn"
+        android:padding="@dimen/_5sdp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rlMainMy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+
+            <LinearLayout
+                android:id="@+id/lltxtMy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtUserNameMy"
+                    style="@style/txtReguler_12Style"
+                    android:layout_width="wrap_content"
+                    android:padding="0dp"
+                    android:text="Mark"
+                    android:visibility="gone"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txtUsermsgMy"
+                    style="@style/txtReguler_12Style"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/txtUserNameMy"
+                    android:singleLine="false"
+                    android:text="Hello"
+                    android:textColor="@android:color/black"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imgAudioMy"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/lltxtMy"
+                android:background="@drawable/microphone"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardviewMy"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_below="@+id/rlMainMy"
+            android:layout_margin="@dimen/_10sdp"
+            android:visibility="gone"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardPreventCornerOverlap="false">
+
+
+
+            <ImageView
+                android:id="@+id/imgFileMy"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:visibility="gone"
+                android:src="@drawable/file"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imgSendimgMy"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_alignParentTop="true"
+                app:roundBottomLeft="true"
+                android:background="@drawable/ic_inner_fb"
+                app:roundBottomRight="true"
+                app:roundTopLeft="true"
+                app:roundTopRight="true" />
+
+            <ImageView
+                android:id="@+id/imgplayMy"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_play" />
+
+        </android.support.v7.widget.CardView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/cardviewMy"
+            android:layout_marginLeft="@dimen/_11sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtMsgTimeMy"
+                style="@style/txtReguler_10Style"
+                android:layout_width="wrap_content"
+                android:padding="0dp"
+                android:layout_centerVertical="true"
+                android:text="10:23 PM"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/imgDoubleTickMy"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txtMsgTimeMy"
+                android:layout_height="@dimen/_17sdp"
+                android:src="@drawable/double_tick"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rrTitle"
+        android:visibility="gone"
+        android:layout_below="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/txtTitle"
+           style="@style/txtBold_14Style"
+            android:text="selviy added you"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+</RelativeLayout>

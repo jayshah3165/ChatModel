@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "435792378290",
+    "firebase_url": "https://allscenarioapp-e1f1c.firebaseio.com",
+    "project_id": "allscenarioapp-e1f1c",
+    "storage_bucket": "allscenarioapp-e1f1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435792378290:android:7c266d545ada54f8",
+        "android_client_info": {
+          "package_name": "com.echo.allscenarioapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd4XNpthYCjZrthd_gxi-nQhliP2WZEsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435792378290-k6juuqggtkpqi3teedraobnvts7ou50n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

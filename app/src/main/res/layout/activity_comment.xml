@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".activity.CommentActivity">
+
+    <com.echo.allscenarioapp.custom.CustomHeader
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"/>
+    <TextView
+        android:id="@+id/txtNoDataFound"
+        style="@style/txtBold_16Style"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/strNoDataFound"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_above="@id/linearLayout"
+        android:background="@color/colorGray" />
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:background="#F5F5F5"
+        android:orientation="horizontal">
+
+
+
+        <EditText
+            android:id="@+id/edtComment"
+            style="@style/editTextStyle"
+            android:hint="Type Message"
+            android:inputType="text"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/btnSend"
+            style="@style/txtBold_16Style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:text="@string/strSend"
+            android:background="@color/green_color"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.echo.allscenarioapp.custom.CustomHeader
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imgProfilePic"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onProfilePicClick"
+                app:actualImageResource="@drawable/avatar"
+                app:actualImageScaleType="fitXY"
+                app:placeholderImage="@drawable/avatar"
+                app:placeholderImageScaleType="fitXY"
+                app:roundAsCircle="true"
+                app:roundingBorderColor="@color/colorPrimary"
+                app:roundingBorderWidth="2dp" />
+
+
+            <TextView
+              style="@style/txtBold_16Style"
+                android:text="Create Group"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:textSize="@dimen/_14sdp" />
+
+            <EditText
+                android:id="@+id/edtCreateGruop"
+                style="@style/editTextStyle"
+                android:inputType="text"
+                android:paddingLeft="0dp"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                />
+            <!--</android.support.design.widget.TextInputLayout>-->
+            <View
+
+                style="@style/view_style"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:layout_marginLeft="@dimen/_25sdp"/>
+
+
+            <Button
+                android:id="@+id/btnCreateGroup"
+                style="@style/btnLohinstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Group"
+                android:textColor="@android:color/white" />
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lstFriendsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

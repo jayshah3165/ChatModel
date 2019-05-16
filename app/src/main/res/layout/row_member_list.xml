@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/rrTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        >
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/_10sdp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/avatar"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true"
+            />
+
+        <LinearLayout
+            android:id="@+id/llName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/imgProfilePic"
+            android:layout_toLeftOf="@+id/txtAdmin"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/txtUserName"
+                style="@style/txtBold_14Style"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="0dp"
+                android:singleLine="false"
+                android:text="abcdefg"
+                android:visibility="visible" />
+
+
+
+            <TextView
+
+                android:id="@+id/txtEmail"
+                style="@style/txtReguler_12Style"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:maxLines="2"
+                android:padding="0dp"
+                android:singleLine="false"
+                android:text="echo@yopmail.com" />
+
+        </LinearLayout>
+        <TextView
+
+            android:id="@+id/txtAdmin"
+            style="@style/txtReguler_12Style"
+            android:layout_width="wrap_content"
+            android:textColor="@color/green_color"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Group Admin" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

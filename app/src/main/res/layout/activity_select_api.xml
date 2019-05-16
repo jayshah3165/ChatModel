@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SelectApiActivity">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/txtLanguage"
+            style="@style/txtReguler_16Style"
+           android:gravity="center"
+            android:textAllCaps="true"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:text="@string/strSelectLanguage" />
+    <TextView
+        android:id="@+id/btnPhpApi"
+        style="@style/btnLohinstyle"
+        android:textAllCaps="true"
+        android:layout_below="@+id/txtLanguage"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:text="@string/strPHP" />
+
+
+    <TextView
+        android:id="@+id/btnNodeApi"
+        android:layout_below="@+id/btnPhpApi"
+        style="@style/btnLohinstyle"
+        android:textAllCaps="true"
+
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:text="@string/strNODE" />
+    </RelativeLayout>
+
+</RelativeLayout>

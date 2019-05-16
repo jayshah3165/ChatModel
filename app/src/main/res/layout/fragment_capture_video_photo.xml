@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/camera_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:visibility="visible">
+
+        <com.echo.allscenarioapp.custom.SquareCameraPreview
+            android:id="@+id/camera_preview_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/llBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp">
+
+        <ImageView
+            android:id="@+id/imgFlash"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_flash_off" />
+
+        <ImageView
+            android:id="@+id/imgSwitchCamera"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/switch_camera" />
+
+        <RelativeLayout
+            android:id="@+id/rlBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/holdtoPresslabl"
+            android:layout_centerInParent="true">
+
+            <com.echo.allscenarioapp.custom.DonutProgress
+                android:id="@+id/capture_image_button"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_margin="10dp"
+                android:visibility="visible"
+                app:donut_background_color="@android:color/transparent"
+                app:donut_circle_starting_degree="-90"
+                app:donut_finished_color="@android:color/transparent"
+                app:donut_finished_stroke_width="15dp"
+                app:donut_max="100"
+                app:donut_text=""
+                app:donut_unfinished_color="@android:color/transparent"
+                app:donut_unfinished_stroke_width="15dp" />
+
+            <ImageView
+                android:id="@+id/record_btn"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_cam_pause" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/holdtoPresslabl"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="Hold for"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/galleryViewList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llBottomView" />
+
+    <Chronometer
+        android:id="@+id/txtPress"
+        style="@style/textViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_back_arrow" />
+
+</RelativeLayout>
+
+
+

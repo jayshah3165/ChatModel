@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">AllScenarioApp</string>
+
+
+    <!--Font Tag-->
+
+    <string name="font_light">100</string>
+    <string name="font_regular">200</string>
+    <string name="font_bold">300</string>
+
+    <!-- Facebool Id Details-->
+    <string name="facebook_app_id">570952780067892</string>
+    <string name="fb_login_protocol_scheme">fb570952780067892</string>
+
+
+    <!--Comman Messages-->
+    <string name="appExitMessage">Please click BACK again to exit</string>
+    <string name="checkInternet">Please check your internet connection</string>
+    <string name="strNoDataFound">No Data Found</string>
+
+    <!--One TO One Chat -->
+    <string name="strEnterComment">Please Enter Comment</string>
+    <string name="strEmail">Email</string>
+    <string name="strTypeMessage">Type Message</string>
+
+    <!--FriendList-->
+    <string name="strSearch">Search</string>
+
+    <!--Select Language(APi)-->
+    <string name="strSelectLanguage">Select Language</string>
+    <string name="strPHP">PHP</string>
+    <string name="strNODE">NODE JS</string>
+
+
+    <!--DeleteConversation Dialog -->
+    <string name="strCancel">Cancel</string>
+    <string name="strDelete">Delete</string>
+    <string name="strDeleteConversation">Are you sure you want to delete Conversation?</string>
+
+
+    <!--NewsFeed Activity -->
+    <string name="strWriteSomething">Write Something</string>
+    <string name="strViewMore">view more</string>
+    <string name="strLike">Like</string>
+    <string name="strComment">Comment</string>
+    <!--Comment Activity -->
+
+    <string name="strSend">Send</string>
+    <string name="strPleaseEnterComment">Please Enter Comment</string>
+
+
+    <!--Create grup Activity -->
+    <string name="strPleaseEnterGroupName">Please Enter Group Name</string>
+
+
+    <!--Post Activity -->
+    <string name="strSelectVideo">SELECT VIDEO FROM</string>
+    <string name="strCamera">Camera</string>
+    <string name="strGallery">Gallery</string>
+</resources>
